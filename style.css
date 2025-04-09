@@ -1,57 +1,98 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-body {
-  background-image: url("src/tablebg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  body {
+    background-image: url("src/tablebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .calculator {
+    position: absolute;
+    background-color: #02065b;
+    width: 400px;
+    height: 550px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: 30px;
+    border-radius: 15px;
+  }
+  
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  input[type="button"] {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #afd6fa;
+    border: none;
+    font-size: 16px;
+  }
+  
+  input[value="AC"] {
+    grid-column: 3/4;
+    background-color: #ff8f00;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+  }
 
-.calculator {
-  position: absolute;
-  background-color: #02065b;
-  width: 400px;
-  height: 550px;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  padding: 30px;
-  border-radius: 15px;
-}
+  @media (max-width: 768px) {
+    .calculator {
+      padding: 10px;
+      width: 300px;
+      height: 440px;
+      border-radius: 15px;
+    }
+  
+    input[type="button"] {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+    input[type="text"] {
+      font-size: 10px;
+    }
+    .buttons {
+        max-width: 370px;
+    }
+  }
 
-input[type="text"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  text-align: right;
-  font-size: 20px;
-  color: #ffffff;
-  border: none;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-input[type="button"] {
-  padding: 5px;
-  margin: 5px;
-  border-radius: 10px;
-  background-color: #afd6fa;
-  border: none;
-  font-size: 16px;
-}
-
-input[value="AC"] {
-  grid-column: 3/4;
-  background-color: #ff8f00;
-  border: none;
-  color: #ffffff;
-  padding: 10px;
-}
+  @media (max-width: 375px) {
+    .calculator {
+      padding: 10px;
+      width: 280px;
+      height: 400px;
+    }
+  
+    input[type="button"] {
+      font-size: 5px;
+      padding: 7px;
+    }
+  
+    input[type="text"] {
+      font-size: 10px;
+    }
+    .buttons {
+        max-width: 280px;
+    }
+  }
