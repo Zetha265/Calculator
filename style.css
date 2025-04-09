@@ -2,14 +2,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 body {
-  background-color: #0083e9;
+  background-image: url("src/tablebg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 .calculator {
   position: absolute;
-  background-color: #ffffff;
+  background-color: #02065b;
   width: 400px;
   height: 550px;
   transform: translate(-50%, -50%);
@@ -18,29 +23,34 @@ body {
   padding: 30px;
   border-radius: 15px;
 }
+
 input[type="text"] {
   display: block;
   width: 100%;
   padding: 10px;
   text-align: right;
   font-size: 40px;
+  color: #ffffff;
   border: none;
 }
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 input[type="button"] {
   padding: 5px;
   margin: 5px;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: #afd6fa;
   border: none;
   font-size: 16px;
 }
+
 input[value="AC"] {
   grid-column: 3/4;
-  background-color: #0083e9;
+  background-color: #ff8f00;
   border: none;
   color: #ffffff;
   padding: 10px;
