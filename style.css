@@ -5,13 +5,13 @@
   font-family: "Roboto Mono", monospace;
 }
 body {
-  background-color: #0083e9;
+  background-color: #ffffff;
 }
 .calculator {
   position: absolute;
-  background-color: #ffffff;
+  background-color: #000000;
   width: 400px;
-  height: 550px;
+  height: 570px;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
@@ -25,6 +25,7 @@ input[type="text"] {
   text-align: right;
   font-size: 40px;
   border: none;
+  color: #ffffff;
 }
 .buttons {
   display: grid;
@@ -35,8 +36,9 @@ input[type="button"] {
   margin: 5px;
   border-radius: 10px;
   background-color: transparent;
-  border: none;
+  border: 2px solid #8e9093;
   font-size: 16px;
+  color:#ffffff;
 }
 input[value="AC"] {
   grid-column: 3/4;
