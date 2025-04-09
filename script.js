@@ -3,7 +3,7 @@ let button_input = document.querySelectorAll(".input-button");
 let input = document.getElementById("input");
 let equal = document.getElementById("equal");
 let clear = document.getElementById("clear");
-let erase = document.getElementById("erase");
+let backspace = document.getElementById("backspace");
 let percent = document.getElementById("percent");
 let scientificFunctionClicked = false;
 window.onload = () => {
@@ -57,7 +57,7 @@ equal.addEventListener("click", () => {
 });
 
 clear.addEventListener("click", () => (input.value = ""));
-erase.addEventListener("click", () => {
+backspace.addEventListener("click", () => {
   input.value = input.value.substr(0, input.value.length - 1);
 });
 
