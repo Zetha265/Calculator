@@ -35,6 +35,12 @@ percent.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {
+  if (input.value.includes("^")) {
+    let numbers = input.value.split("^"); // Split the string by ^
+    let base = parseFloat(numbers[0]);
+    let exponent = parseFloat(numbers[1]);
+    input.value = Math.pow(base, exponent);
+    }
   if (!scientificFunctionClicked) {
     equal_pressed = 1;
     let inp_val = input.value;
@@ -173,4 +179,9 @@ document.getElementById("square-root").addEventListener("click", () => {
     }   else {
       input.value = Math.sqrt(0);
     }
+});
+
+/* EXPONENT FUNCTION */
+document.getElementById("pow").addEventListener("click", () => {
+  input.value += "^";
 });
