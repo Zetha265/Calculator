@@ -36,11 +36,8 @@ percent.addEventListener("click", () => {
 
 equal.addEventListener("click", () => {
   if (input.value.includes("^")) {
-    let numbers = input.value.split("^"); // Split the string by ^
-    let base = parseFloat(numbers[0]);
-    let exponent = parseFloat(numbers[1]);
-    input.value = Math.pow(base, exponent);
-    }
+    input.value = input.value.replace(/\^/g, "**");
+  }
   if (!scientificFunctionClicked) {
     equal_pressed = 1;
     let inp_val = input.value;
@@ -134,6 +131,7 @@ document.getElementById("log").addEventListener("click", () => {
 
 /* PI */
 document.getElementById("pi").addEventListener("click", () => {
+  scientificFunctionClicked = true;
   input.value += 3.14;
 });
 
@@ -164,6 +162,7 @@ document.getElementById("square-root").addEventListener("click", () => {
 });
 
 /* EXPONENT FUNCTION */
+
 document.getElementById("pow").addEventListener("click", () => {
-  input.value += "**";
+  input.value += "^";
 });
