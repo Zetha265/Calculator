@@ -145,7 +145,6 @@ document.getElementById("dec-binary").addEventListener("click", () => {
   let val = input.value.trim();
 
   if (val === "") return;
-
   // Check if the input is a binary number (only 0s and 1s)
   if (/^[01]+$/.test(val)) {
     // Binary to Decimal
