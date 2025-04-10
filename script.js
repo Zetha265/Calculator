@@ -133,6 +133,7 @@ document.getElementById("pi").addEventListener("click", () => {
 });
 
 /* EXPONENT FUNCTION */
+
 document.getElementById("pow").addEventListener("click", () => {
   if (input.value) {
     input.value = Math.pow(input.value, 2);
@@ -140,10 +141,19 @@ document.getElementById("pow").addEventListener("click", () => {
     input.value = Math.pow(0, 2);
   }
 });
+/*
+function pow() {
+  var base=(document.getElementById("base").value);
+    var exponent=(document.getElementById("exponent").value);
+    var result = Math.pow(base, exponent);
+    document.write(result);
+}*/
 
 document.getElementById("dec-binary").addEventListener("click", () => {
   let val = input.value.trim();
+
   if (val === "") return;
+
   // Check if the input is a binary number (only 0s and 1s)
   if (/^[01]+$/.test(val)) {
     // Binary to Decimal
@@ -154,4 +164,13 @@ document.getElementById("dec-binary").addEventListener("click", () => {
   } else {
     alert("Invalid input for conversion.");
   }
+});
+
+/* SQUARE ROOT FUNCTION */
+document.getElementById("square-root").addEventListener("click", () => {
+    if (input.value) {
+      input.value = Math.sqrt(input.value);
+    }   else {
+      input.value = Math.sqrt(0);
+    }
 });
