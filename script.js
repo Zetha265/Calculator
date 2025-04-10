@@ -140,3 +140,20 @@ document.getElementById("pow").addEventListener("click", () => {
     input.value = Math.pow(0, 2);
   }
 });
+
+document.getElementById("dec-binary").addEventListener("click", () => {
+  let val = input.value.trim();
+
+  if (val === "") return;
+
+  // Check if the input is a binary number (only 0s and 1s)
+  if (/^[01]+$/.test(val)) {
+    // Binary to Decimal
+    input.value = parseInt(val, 2); // base 2
+  } else if (/^\d+(\.\d+)?$/.test(val)) {
+    // Decimal to Binary (ignore decimals)
+    input.value = parseInt(val, 10).toString(2);
+  } else {
+    alert("Invalid input for conversion.");
+  }
+});
