@@ -138,23 +138,6 @@ document.getElementById("pi").addEventListener("click", () => {
   input.value += 3.14;
 });
 
-/* EXPONENT FUNCTION */
-
-document.getElementById("pow").addEventListener("click", () => {
-  if (input.value) {
-    input.value = Math.pow(input.value, 2);
-  } else {
-    input.value = Math.pow(0, 2);
-  }
-});
-/*
-function pow() {
-  var base=(document.getElementById("base").value);
-    var exponent=(document.getElementById("exponent").value);
-    var result = Math.pow(base, exponent);
-    document.write(result);
-}*/
-
 document.getElementById("dec-binary").addEventListener("click", () => {
   let val = input.value.trim();
 
