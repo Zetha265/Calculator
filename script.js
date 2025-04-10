@@ -95,35 +95,44 @@ function calculateSciFunction(func, value) {
     alert("Invalid Input");
   }
 }
+
+/* SIN FUNCTION */
 document.getElementById("sin").addEventListener("click", () => {
   scientificFunctionClicked = true;
   input.value = "sin(" + input.value + ")";
 });
 
+/* COS FUNCTION */
 document.getElementById("cos").addEventListener("click", () => {
   scientificFunctionClicked = true;
   input.value = "cos(" + input.value + ")";
 });
 
+/* TAN FUNCTION */
 document.getElementById("tan").addEventListener("click", () => {
   scientificFunctionClicked = true;
   input.value = "tan(" + input.value + ")";
 });
 
+/* EULER FUNCTION */
 document.getElementById("e").addEventListener("click", () => {
   scientificFunctionClicked = true;
   input.value = "e(" + input.value + ")";
 });
 
+/* LOG FUNCTION */
 document.getElementById("log").addEventListener("click", () => {
   scientificFunctionClicked = true;
   input.value = "log(" + input.value + ")";
 });
 
+/* PI */
 document.getElementById("pi").addEventListener("click", () => {
   scientificFunctionClicked = true;
   input.value = 3.14;
 });
+
+/* EXPONENT FUNCTION */
 document.getElementById("pow").addEventListener("click", () => {
   if (input.value) {
     input.value = Math.pow(input.value, 2);
