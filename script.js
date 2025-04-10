@@ -129,7 +129,7 @@ document.getElementById("log").addEventListener("click", () => {
 /* PI */
 document.getElementById("pi").addEventListener("click", () => {
   scientificFunctionClicked = true;
-  input.value = 3.14;
+  input.value += 3.14;
 });
 
 /* EXPONENT FUNCTION */
