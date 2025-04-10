@@ -166,5 +166,5 @@ document.getElementById("square-root").addEventListener("click", () => {
 
 /* EXPONENT FUNCTION */
 document.getElementById("pow").addEventListener("click", () => {
-  input.value += "^";
+  input.value += "**";
 });
