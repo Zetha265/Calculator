@@ -35,6 +35,14 @@ percent.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {
+
+  //Secret message when input is (.)(.)5318008
+  if (input.value == "(.)(.)5318008"){
+    alert("Congratulations, you've unlocked developer mode");
+    input.value = "Manuel Ian Joy";
+  }
+
+  //Rewrite input in eval readable format 
   input.value = input.value
   .replace(/sin\(/g, "Math.sin(")
   .replace(/cos\(/g, "Math.cos(")
