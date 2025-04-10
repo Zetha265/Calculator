@@ -105,31 +105,31 @@ function calculateSciFunction(func, value) {
 /* SIN FUNCTION */
 document.getElementById("sin").addEventListener("click", () => {
   scientificFunctionClicked = true;
-  input.value = "sin(" + input.value + ")";
+  input.value += "sin(";
 });
 
 /* COS FUNCTION */
 document.getElementById("cos").addEventListener("click", () => {
   scientificFunctionClicked = true;
-  input.value = "cos(" + input.value + ")";
+  input.value += "cos(";
 });
 
 /* TAN FUNCTION */
 document.getElementById("tan").addEventListener("click", () => {
   scientificFunctionClicked = true;
-  input.value = "tan(" + input.value + ")";
+  input.value += "tan(";
 });
 
 /* EULER FUNCTION */
 document.getElementById("e").addEventListener("click", () => {
   scientificFunctionClicked = true;
-  input.value = "e(" + input.value + ")";
+  input.value += "e(";
 });
 
 /* LOG FUNCTION */
 document.getElementById("log").addEventListener("click", () => {
   scientificFunctionClicked = true;
-  input.value = "log(" + input.value + ")";
+  input.value += "log(";
 });
 
 /* PI */
