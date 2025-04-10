@@ -35,10 +35,15 @@ percent.addEventListener("click", () => {
 });
 
 equal.addEventListener("click", () => {
-  if (input.value.includes("^")) {
-    input.value = input.value.replace(/\^/g, "**");
-  }
-  if (!scientificFunctionClicked) {
+  input.value = input.value
+  .replace(/sin\(/g, "Math.sin(")
+  .replace(/cos\(/g, "Math.cos(")
+  .replace(/tan\(/g, "Math.tan(")
+  .replace(/log\(/g, "Math.log(")
+  .replace(/sqrt\(/g, "Math.sqrt(")
+  .replace(/\^/g, "**");
+
+  if (true) {
     equal_pressed = 1;
     let inp_val = input.value;
     try {
@@ -51,53 +56,14 @@ equal.addEventListener("click", () => {
     } catch (err) {
       alert("Error");
     }
-  } else {
-    let resultArray = input.value.match(/^([a-z]+)\((.+)\)$/)?.slice(1);
-    const [method, value] = resultArray;
-    calculateSciFunction(method, value);
-  }
-  scientificFunctionClicked = false;
+  } 
+  
 });
 
 clear.addEventListener("click", () => (input.value = ""));
 backspace.addEventListener("click", () => {
   input.value = input.value.substr(0, input.value.length - 1);
 });
-
-function calculateSciFunction(func, value) {
-  let result;
-  let expressionArray = value.split("+").map(parseFloat);
-  const inputValue = expressionArray.reduce(
-    (acc, currentValue) => acc + currentValue,
-    0
-  );
-
-  switch (func) {
-    case "sin":
-      result = Math.sin(inputValue);
-      break;
-    case "cos":
-      result = Math.cos(inputValue);
-      break;
-    case "tan":
-      result = Math.tan(inputValue);
-      break;
-    case "e":
-      result = Math.exp(inputValue);
-      break;
-    case "log":
-      result = Math.log(inputValue);
-      break;
-    default:
-      break;
-  }
-
-  if (result !== undefined) {
-    input.value = result.toFixed(2);
-  } else {
-    alert("Invalid Input");
-  }
-}
 
 /* SIN FUNCTION */
 document.getElementById("sin").addEventListener("click", () => {
