@@ -5,7 +5,7 @@ let equal = document.getElementById("equal");
 let clear = document.getElementById("clear");
 let backspace = document.getElementById("backspace");
 let percent = document.getElementById("percent");
-let scientificFunctionClicked = false;
+
 window.onload = () => {
   input.value = "";
 };
@@ -43,21 +43,7 @@ equal.addEventListener("click", () => {
   .replace(/sqrt\(/g, "Math.sqrt(")
   .replace(/\^/g, "**");
 
-  if (true) {
-    equal_pressed = 1;
-    let inp_val = input.value;
-    try {
-      let solution = eval(inp_val);
-      if (Number.isInteger(solution)) {
-        input.value = solution;
-      } else {
-        input.value = solution.toFixed(2);
-      }
-    } catch (err) {
-      alert("Error");
-    }
-  } 
-  
+  input.value=eval(input.value);
 });
 
 clear.addEventListener("click", () => (input.value = ""));
@@ -97,7 +83,6 @@ document.getElementById("log").addEventListener("click", () => {
 
 /* PI */
 document.getElementById("pi").addEventListener("click", () => {
-  scientificFunctionClicked = true;
   input.value += 3.14;
 });
 
